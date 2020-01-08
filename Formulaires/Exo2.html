@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Enquete</title>
+</head>
+
+<body>
+    <form method="get" action="">
+        <h1 align="center"> Nous lancons une grande enquete sur les anciens stagiaires <br />
+            <h5 align="center">merci de nous répondre</h5>
+        </h1>
+        <p>
+            <input type="text" name="le_nom" />
+            Votre nom
+        </p>
+        <p>
+            <input type="text" name="le_prenom" />
+            Votre prénom
+        </p>
+        <p>
+            <input type="text" name="la_date" />
+            Votre date de naissance
+        </p>
+        <p>
+            <input type="text" name="la_adresse" />
+            Votre adresse
+        </p>
+        <p>
+            <input type="text" name="la_ville" />
+            Votre ville
+        </p>
+        <p>
+            <input type="text" name="le_code" />
+            Votre code postal
+        </p>
+        <p>
+            <input type="text" name="le_mail" />
+            Votre E-mail
+        </p>
+        <p>
+            <input type="radio" name="sexe" value="homme" checked="checked" />
+            Vous etes un homme
+            <input type="radio" name="sexe" value="femme" />
+            Vous etes une femme
+        </p>
+        <p>
+            <input type="text" name="metier" list="liste_metiers" placeholder="saisir votre métier" />
+            <datalist id="liste_metiers">
+                <option value="Developpeur" />
+                <option value="Plombier" />
+                <option value="Formateur AFPA??" />
+                <option value="La réponse D" />
+                <option value="Autre" />
+            </datalist>
+        </p>
+
+        <p>
+            <input type="text" name="metier_autre">
+            Si vous avez répondu autre, précisez
+        </p>
+
+        <p>
+            <input type="text" name="salaire" list="liste_salaires" placeholder="saisir largent en masse" />
+            <datalist id="liste_salaires">
+                <option value="<1000$" />
+                <option value=">1000$<1500$" />
+                <option value=">1500$<2000$" />
+                <option value=">2000$" />
+            </datalist>
+        </p>
+        <p>
+            <input type="text" name="annee_stage">
+            En quelle année avez-vous suivi le stage AFPA
+        </p>
+        <p>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Commentaires"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Validez">
+            <input type="reset" value="Annulez">
+        </p>
+    </form>
+</body>
