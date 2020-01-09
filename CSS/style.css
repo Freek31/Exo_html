@@ -1,7 +1,6 @@
 body {
     background-color: #C6C0A0;
-    font-family: Georgia;
-    font-size: 100%;
+    font-family: Georgia, monospace;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -10,7 +9,7 @@ body {
 h2 {
     color: #7D775C;
     font-size: larger;
-    font-weight: bold;
+    font-weight: bolder;
     font-style: oblique;
     text-align: center;
     letter-spacing: 1px;
@@ -19,15 +18,13 @@ h2 {
 
 h3 {
     color: #7D775C;
-    font-size: larger;
+    font-size: 1.3em;
     font-weight: bold;
     letter-spacing: 1px;
-    margin-right: 20px;
-    text-align: left;
 }
 
-li{
-    line-height: 12px;
+li {
+    line-height: 25px;
 
 }
 
@@ -38,19 +35,23 @@ span {
 
 #duree {
     color: rgb(255, 10, 10);
-    font-size: larger;
+    font-size: x-large;
     text-decoration: underline;
 }
 
 #container {
     background-color: rgb(255, 254, 254);
     font-size: 0.75em;
+
     border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px; 
     box-shadow: 8px 8px 12px #aaa;
     -moz-box-shadow: 8px 8px 12px #aaa;
     -webkit-box-shadow: 8px 8px 12px #aaa;
+    
     float: left;
-    width:85%;
+    width: 85%;
 }
 
 
@@ -69,12 +70,6 @@ span {
 
 
 
-#menu a:hover,
-#menu a:focus {
-    color: #BDD7B5;
-    background-color: #508768;
-}
-
 #menu a {
     display: block;
     margin: 5%;
@@ -82,10 +77,16 @@ span {
     text-decoration: none;
     line-height: 2em;
     width: 80%;
-    border: 1px solid blue;
+    border: 1px solid rgb(58, 139, 185);
     background-color: #BDD7B5;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 5px 5px 0px blue;
+    box-shadow: 5px 5px 0px rgb(79, 161, 161);
     text-decoration: none;
+}
+
+#menu a:hover,
+#menu a:focus {
+    color: #BDD7B5;
+    background-color: #508768;
 }
