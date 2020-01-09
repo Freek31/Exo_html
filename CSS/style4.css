@@ -1,0 +1,42 @@
+ul:nth-child(1) li:nth-child(2n+2) {
+
+    color: coral;
+}
+
+ul:nth-child(2) li:nth-child(-n+5) {
+
+    color: coral;
+}
+
+ul:nth-child(3) li:nth-last-child(-n+5) {
+
+    color: coral;
+}
+
+ul:nth-child(n+1) {
+    float: left;
+    width: 20%;
+}
+
+input[type="text"]:hover, input[type="text"]:focus {
+
+    background-color : #e60f0f; 
+  
+  }
+
+  
+  .bouton {
+    display: block;
+    margin: 5%;
+    color: #508768;
+    text-decoration: none;
+    line-height: 2em;
+    width: 80%;
+    border: 1px solid blue;
+    background-color: #BDD7B5;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px blue;
+    text-decoration: none;
+}  
+

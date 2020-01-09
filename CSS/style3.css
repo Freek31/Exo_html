@@ -1,0 +1,24 @@
+td{
+    border: 1px solid black;
+}
+
+tr:nth-child(1) td:nth-child(-n+4){
+    background:  chartreuse;
+}
+
+tr:nth-child(2n+2) td:nth-child(-n+4){
+    background: gold;
+}
+tr:nth-last-child(n+1) td:nth-child(5){
+    color: black;
+    background: mediumturquoise;
+}
+tr:nth-last-child(n+1) td:nth-child(5):hover, tr:nth-last-child(n+1) td:nth-child(5):focus {
+    color: black;
+    background: coral;
+}
+
+div{
+
+    
+}
