@@ -1,0 +1,29 @@
+
+
+header {
+
+    background-color: chocolate;
+}
+
+
+main {
+    
+}
+section {
+    float:left;
+    background-color: darksalmon;
+    width: 15%;
+}
+
+aside {
+    width: 70%;
+    float:right;
+    background-color: khaki;
+
+}
+
+footer {
+    float: left;
+    background-color: lightgreen;
+
+}

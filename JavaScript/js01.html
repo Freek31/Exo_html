@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<style>
+			div{
+				width:400px;
+				float:left;
+				min-height: 150px;
+				padding:10px;
+			}
+			div:first-child{
+				border:1px solid green;
+
+			}
+			div:last-child{
+				border:1px solid red;
+			}
+		</style>
+		<script>
+			function valider(){
+				var s = document.getElementById('saisie1');
+				var d = document.getElementById('message');
+				var texte = (s.value!='') ? s.value : "saisie vide";
+				d.innerHTML = texte;
+			}
+		</script>
+		
+	</head>
+	<body>
+	<div>
+		<input type="text" id="saisie1" value=""/>
+		<input type="button" onClick="valider()" value="Valider"/>
+	</div>
+	<div id="message"></div>
+	</body>
+</html>

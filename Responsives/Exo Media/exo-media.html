@@ -1,0 +1,127 @@
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<style>
+		@media screen {
+			div.maDiv {
+				margin-left: auto;
+				margin-right: auto;
+				display: inline-block;
+				background-color: #FFDFBF;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+
+			}
+
+			div.monBlock {
+				background-color: #CCFF99;
+				float: left;
+
+
+			}
+		}
+
+		@media screen and (min-width: 1200px) {
+			div.maDiv {
+				min-width: 1200px;
+				
+			}
+
+			div.monBlock {
+				width: 290px;
+				height: 75px;
+				margin: 5px;
+			}
+		}
+
+		@media screen and (min-width: 961px) and (max-width: 1199px) {
+			div.maDiv {
+				width: 960px;
+			}
+
+
+			div.monBlock {
+		
+				width: 310px;
+				height: 75px;
+				margin:5px;
+
+			}
+		}
+
+		@media screen and (min-width: 768px) and (max-width: 960px) {
+			div.maDiv {
+
+				width: 768;
+
+			}
+
+
+			div.monBlock {
+		
+				width: 374px;
+				height: 75px;
+				margin: 5px;		
+				}
+		}
+
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			div.maDiv {
+
+
+				width: 480px;
+
+			}
+
+
+			div.monBlock {
+
+				width: 470px;
+				height: 75px;
+				margin:5;
+
+			}
+		}
+
+		@media screen and (max-width: 479px) {
+			div.maDiv {
+
+		
+				width: 497px;
+		
+			}
+
+
+			div.monBlock {
+		
+				width: 469px;
+				height: 75px;
+				margin:5px;
+
+			}
+		}
+
+		/* 
+				ici mettre le style des medias 
+				media >= 1200
+				961 <= media <= 1199
+				768 <= media <= 960
+				480 <= media <= 767
+				media <= 479
+			*/
+	</style>
+</head>
+
+<body>
+	<div class="maDiv">
+		<div class="monBlock"></div>
+		<div class="monBlock"></div>
+		<div class="monBlock"></div>
+		<div class="monBlock"></div>
+	</div>
+</body>
+
+</html>
