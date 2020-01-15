@@ -1,0 +1,12 @@
+div{
+	width:400px;
+	min-height:200px;
+	float:left;
+	&:first-child{
+		border:1px solid blue;
+	}
+	&:last-child{
+		border:1px solid red;
+	}
+
+}
