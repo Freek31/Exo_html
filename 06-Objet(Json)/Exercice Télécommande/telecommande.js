@@ -13,7 +13,10 @@ var Telecommande = {
     },
 
     Compteur: function (c) {
-       var 
+        var cpt_black = document.querySelectorAll("section table#tableau tr td[style='color: black;']").length;
+        var cpt_red = document.querySelectorAll("section table#tableau tr td[style='color: red;']").length;
+        var cpt_blue = document.querySelectorAll("section table#tableau tr td[style='color: red;']").length;
+        var cpt_green = document.querySelectorAll("section table#tableau tr td[style='color: green;']").length;
     },
 
     // //GETTERS

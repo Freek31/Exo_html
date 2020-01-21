@@ -1,0 +1,30 @@
+div {
+
+  float: left;
+  min-height: 200px;
+  padding: 20px;
+  margin: 10px;
+}
+
+div:first-child {
+  border: 1px solid blue;
+  width: 200px;
+
+}
+
+div:last-child {
+  border: 1px solid red;
+  width: 400px;
+}
+
+img {
+  max-height: 85px;
+  margin: 5px;
+  border: 1px solid grey; 
+  cursor: grab;
+}
+
+img:hover,
+img:focus {
+  background-color: red;     /* background rouge quand on survole limage*/ 
+}
