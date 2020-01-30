@@ -32,22 +32,63 @@
 	</style>
 
 	<script type="text/javascript">
+	
 		function eventOnClick() {
 			var villes = document.getElementById('ville')
 			var villeSelectValue = villes.options[villes.selectedIndex].value;
-			const urlVille = "http://localhost/Exos_Html/08-Angular/Meteo/meteo.php?ville=";
+			const urlVille = "http://localhost/Exo_html/08-Angular/Meteo/meteo.php?ville=";
 			var templateVille = `${urlVille}${villeSelectValue}`;
+			fonct_fetch(templateVille);
+		}
 
-			fetch(templateVille)
+		function eventOnClick2() {
+			var villes = document.getElementById('nom_ville');
+			var ville = villes.value;
+			console.log(ville);
+
+			const urlVille = "https://www.prevision-meteo.ch/services/json/";
+
+			var templateVille = `${urlVille}${ville}`;
+
+			fonct_fetch(templateVille);
+		}
+
+		function fonct_fetch(templatVille) {
+			fetch(templatVille)
 				.then(function (response) {
 					// Récupérer le corps de la requete en JSON
 					return response.json();
 				})
 				.then(function (data) {
-					console.log(data.city_info.name);
-					var div = document.getElementById('madiv');
+					if (data.errors) {
+						console.log(data.errors)
+						let html =
+							`
+							<h1>Erreur : ${data.errors[0].description}</h1>
 
-					let html = `
+							`;
+						document.getElementById('madiv').innerHTML = html;
+					} else {
+
+
+						console.log(data.city_info.name);
+						//var div = document.getElementById('madiv');
+						//var villee = data.city_info.name;
+
+						let html =
+							`
+							<label for = "nomm_ville">Nom de ville : </label>
+							<input type="text" id="nom_ville" name = "nom_ville">
+        					<button id="meteo_ville" onclick="eventOnClick2()">Valider</button>
+					`;
+
+						html += `
+					<div>
+						</br>
+						<h1>${data.city_info.name}</h1>
+						<h2>${data.current_condition.date}</h2>
+					</div>
+
 					<table id='prev_jours'>
 						<tr>
 							<td>Jour</td>
@@ -58,8 +99,8 @@
 						</tr>
 						`;
 
-					for (var i = 0; i < 5; i++) {
-						html += `
+						for (var i = 0; i < 5; i++) {
+							html += `
 								<tr>
 									<td>${data['fcst_day_'+i].day_long}</td>
 									<td><img src="${data['fcst_day_'+i].icon}"></td>
@@ -68,12 +109,17 @@
 									<td>${data['fcst_day_'+i].tmax} ${'°C'}</td>
 								</tr>
 							`;
+						}
+
+						html += `</table>`;
+
+						document.getElementById('madiv').innerHTML = html;
 					}
-
-					html += `</table>`;
-
-					document.getElementById('madiv').innerHTML = html;
 				})
+
+				.catch(function (error) {
+					console.log('Il y a eu un problème avec l\'opération fetch: ' + error.message);
+				});
 		}
 	</script>
 
